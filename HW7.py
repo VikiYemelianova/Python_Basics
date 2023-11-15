@@ -6,4 +6,3 @@ for i in first_lst:
 new_lst += [0] * (len(first_lst) - len(new_lst))
 
 print(new_lst)
-

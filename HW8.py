@@ -6,4 +6,3 @@ else:
     result = summa * lst[-1]
 
 print(result)
-

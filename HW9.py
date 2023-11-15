@@ -8,3 +8,5 @@ print(lst)
 numbers = (lst[0], lst[2], lst[-2])
 new_lst.extend(numbers)
 print(new_lst)
+
+
