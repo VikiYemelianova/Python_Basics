@@ -1,17 +1,31 @@
-#x = input("Enter the name of the variable: ")
-
-#variable_name = ['_', 'x', 'get_value', 'some_super_puper_value', 'm3']
-
-#if x in variable_name:
-    #print(True)
-#else:
-    #print(False)
-
-# import string library function
 import string
+import keyword
+users_variable = input("Enter the name of the variable: ")
 
-# Storing the sets of punctuation in variable result
-result = string.punctuation
 
-# Printing the punctuation values
-print(result)
+if users_variable[0].isdigit() or users_variable in keyword.kwlist:
+    print(False)
+else:
+    inv_letter = False
+    for letter in users_variable:
+        if letter.isupper() or letter.isspace() or (letter in string.punctuation and letter != '_'):
+            inv_letter = True
+            break
+
+    if inv_letter:
+        print(False)
+    else:
+        print(True)
+
+
+
+
+
+
+
+
+
+
+
+
+
