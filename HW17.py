@@ -1,6 +1,6 @@
 def correct_sentence(text):
-    if not text.upper():
-        text = text.upper() + text[1:]
+    if not text[0].isupper():
+        text = text[0].upper() + text[1:]
     if not text.endswith('.'):
         text += '.'
     return text
