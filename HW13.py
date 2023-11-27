@@ -1,16 +1,20 @@
 import string
 user_input = input("Enter letters: ")
 
-letters = user_input.split('-')
-print(letters)
-min_let, max_let = min(letters[0], letters[1]), max(letters[0], letters[1])
+first_letter, second_letter = user_input.split('-')
 
-if max_let.isupper():
-    result = "".join([let for let in string.ascii_uppercase if min_let <= let.upper() <= max_let])
+if (first_letter.islower() and second_letter.isupper()) or (first_letter.isupper() and second_letter.islower()):
+    first_index = string.ascii_letters.index(first_letter)
+    second_index = string.ascii_letters.index(second_letter)
+
+    result = string.ascii_letters[first_index:second_index + 1]
+
+    print(result)
 else:
-    result = "".join([let for let in string.ascii_lowercase if min_let <= let <= max_let])
+    first_index = string.ascii_letters.index(first_letter)
+    second_index = string.ascii_letters.index(second_letter)
 
-print(result)
+    result = string.ascii_letters[first_index:second_index + 1]
 
-#?????
+    print(result)
 
